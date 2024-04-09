@@ -4,73 +4,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Lankan Wildlife</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
 </head>
-<body>
+<body x-data="topic4">
     <header>
         <section class="home-5" id="home-5">
             <section class="header">
             <nav class="navbar">
                 <ul>
-                    <li><a href="Home Page.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Introduction.html">Introduction</a></li>
                     <li><a href="Department of Wildlife Conservation.html">Department of Wildlife Conservation</a></li>
                     <li><a href="Animals.html">Animals</a>
                         <section class="submenues">
                             <ul>
-                                <li><a href="yala.html">Yala National Park</a></li>
-                                <li><a href="wilpattu.html">Wilpattu National Park</a></li>
+                                <li><a href="Yala.html">Yala National Park</a></li>
+                                <li><a href="Wilpattu.html">Wilpattu National Park</a></li>
                             </ul>
                         </section>
                     </li>
                     <li><a href="Sri lankan Leopard.html">Sri Lankan Leopard</a></li>
+                    <li><a href="logintest.html">Login</a></li>
+                    <li><a href="data.html">Admin</a></li>
                 </ul>
             </nav>
             </section>
-            <section class="content">
-                <h1>Animals</h1>
+            <section class="pageheadings">
+                <h1 id="title" x-text="title" contenteditable="true">Animals</h1>
                 
 
             </section>
         </section>
     </header>
     <section class="featured-wildlife" id="featured-wildlife">
-        <h1 class="heading">Animals</h1>
-        <div class="box-container">
-          <div class="box">
-            <div class="image">
-              <img src="indian-cobra01.jpg" alt="" />
-              <div class="content">
-                <h3>Sri Lankan Cobra</h3>
-                <p>The Sri Lankan cobra (Naja naja) is a venomous snake species found in Sri Lanka and other parts of South Asia.  </p>
-              </div>
+      <h1 class="heading" id="title1" x-text="title1" contenteditable="true"></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="elephant.jpg" alt="" />
+            <div class="content">
+              <h3 id="title2" x-text="title2" contenteditable="true" ></h3>
+              <p id="title3" x-text="title3" contenteditable="true"> </p>
             </div>
           </div>
-      
-          <div class="box">
-            <div class="image">
-              <img src="mugatiya.jpg" alt="" />
-              <div class="content">
-                <h3>Brown Mongoose</h3>
-                <p>The brown mongoose found in Sri Lanka is likely the Indian brown mongoose (Herpestes fuscus), also known as the Indian gray mongoose or the common gray mongoose. </p></div>
+        </div>
+    
+        <div class="box">
+          <div class="image">
+            <img src="bear2.webp" alt="" />
+            <div class="content">
+              <h3 id="title4" x-text="title4" contenteditable="true"></h3>
+              <p id="title5" x-text="title5" contenteditable="true"> </p>
             </div>
           </div>
-      
-          <div class="box">
-            <div class="image">
-              <img src="peacock.jpg" alt="" />
-              <div class="content">
-                <h3>Peacock</h3>
-                <p>The Sri Lankan peafowl, scientifically known as Pavo cristatus, is a captivating bird celebrated for its vibrant plumage.</p>
-              </div>
+        </div>
+    
+        <div class="box">
+          <div class="image">
+            <img src="peacock.jpg" alt="" />
+            <div class="content">
+              <h3 id="title6" x-text="title6" contenteditable="true"></h3>
+              <p id="title7" x-text="title7" contenteditable="true"></p>
             </div>
           </div>
-            </section>
-        </section>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="Gray-Langur-VW-4.jpg" alt="" />
+            <div class="content">
+              <h3 id="title8" x-text="title8" contenteditable="true"></h3>
+              <p id="title9" x-text="title9" contenteditable="true">
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="sna.jpg" alt="" />
+            <div class="content">
+              <h3 id="title10" x-text="title10" contenteditable="true"></h3>
+              <p id="title11" x-text="title11" contenteditable="true"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="Omika.jpg" alt="" />
+            <div class="content">
+              <h3 id="title12" x-text="title12" contenteditable="true"></h3>
+              <p id="title13" x-text="title13" contenteditable="true"> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="mugatiya.jpg" alt="" />
+            <div class="content">
+              <h3 id="title14" x-text="title14" contenteditable="true"></h3>
+              <p id="title15" x-text="title15" contenteditable="true"> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="thala1.jpg" alt="" />
+            <div class="content">
+              <h3 id="title16" x-text="title16" contenteditable="true"></h3>
+              <p id="title17" x-text="title17" contenteditable="true"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="dadulena.jpg" alt="" />
+            <div class="content">
+              <h3 id="title18" x-text="title18" contenteditable="true"></h3>
+              <p id="title19" x-text="title19" contenteditable="true">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        
+<div class="button-container">
+  <a href="Yala.html" class="button">Yala National Park</a>
+  <a href="Wilpattu.html" class="button">Wilpattu National Park </a>
+</div>
+
+      </section>
          <!-- footer section starts -->
 <section class="footer">
     <a href="#" class="logo">Sri Lankan Wildlife<span>Website</span></a>
     <p>All Rights Reserved | © 2024 Powered By Omika Fernando</p>
   </section>
+
   <!-- footer section ends -->
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="Animals.js"></script>
+
 </body>
 </html>

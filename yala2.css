@@ -1,0 +1,962 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--black);
+  }
+  
+  section {
+    padding: 5rem 9%;
+  }
+  
+  .heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .yala {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('yalap.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+  }
+  
+  
+    /* header */
+  .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 5rem 9%;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+    }
+    
+    .header.active {
+      background: var(--white);
+      padding: 3rem 9%;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    .header.active .logo,
+    .header.active .navbar a,
+    .header.active .menu {
+      color: var(--black);
+    }
+    
+    .header .logo {
+      margin-right: auto;
+      font-size: 2rem;
+      color: var(--white);
+      font-weight: 700;
+    }
+    
+    .header .logo span {
+      font-weight: normal;
+    }
+    
+    /* Style for the main navigation bar */
+.navbar {
+  position: absolute;
+  left: 750px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px; 
+  margin-right: 30px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 30px;
+  position: relative; /* Add relative positioning to create a context for absolute positioning of submenus */
+}
+
+.navbar a {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.navbar a:hover {
+  color: #ecf0f1;
+}
+
+/* Style for the submenus */
+.submenues {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.navbar li:hover .submenues {
+  display: block;
+  opacity: 1; /* Set opacity to 1 on hover to trigger the fade-in effect */
+}
+
+.submenues ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.submenues li {
+  margin: 5px 0;
+}
+
+.submenues a {
+  color: #ffffff;
+}
+
+.submenues a:hover {
+  color: #ecf0f1;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:whitesmoke;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100px; ;
+    line-height:25px ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+} .intro{
+    background: var(--light-bg);
+
+}
+.intro .box-container .box .image {
+    height: 80%;
+    width: 100% ;
+}
+  
+  .intro .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .intro .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .intro .box-container .box p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: var(--light-color);
+    text-transform: none;
+  }
+
+  .intro .box-container .box.heading h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+  }
+  .featured-wildlife .box-container .box .image {
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  .featured-wildlife .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .featured-wildlife .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+    
+  }
+  
+  .featured-wildlife .box-container .box .image .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 2rem;
+    z-index: 90;
+    transform: translateY(100%);
+  }
+  
+  .featured-wildlife .box-container .box:hover .image .content {
+    transform: translateY(0);
+  }
+
+  * {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+  
+
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--black);
+  }
+  
+  .box-container {
+    padding :30px;
+  }
+  
+  .heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  /* home */
+  .home {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('lev.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      text-align: center;
+    }
+    
+    /* home */
+  
+  
+    /* header */
+  .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 5rem 9%;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+    }
+    
+    .header.active {
+      background: var(--white);
+      padding: 3rem 9%;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    .header.active .logo,
+    .header.active .navbar a,
+    .header.active .menu {
+      color: var(--black);
+    }
+    
+    .header .logo {
+      margin-right: auto;
+      font-size: 2rem;
+      color: var(--white);
+      font-weight: 700;
+    }
+    
+    .header .logo span {
+      font-weight: normal;
+    }
+    
+    /* Style for the main navigation bar */
+.navbar {
+  position: absolute;
+  left: 750px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.292);
+  padding: 10px;
+
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px; 
+  margin-right: 30px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 30px;
+  position: relative; /* Add relative positioning to create a context for absolute positioning of submenus */
+}
+
+.navbar a {
+  text-decoration: none;
+  color:rgb(249, 249, 249);
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+.navbar a:hover {
+  color: #ecf0f1;
+}
+
+/* Style for the submenus */
+.submenues {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.navbar li:hover .submenues {
+  display: block;
+  opacity: 1; /* Set opacity to 1 on hover to trigger the fade-in effect */
+}
+
+.submenues ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.submenues li {
+  margin: 5px 0;
+}
+
+.submenues a {
+  color: #ffffff;
+}
+
+.submenues a:hover {
+  color: #ecf0f1;
+}
+
+
+  .content{
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      color:whitesmoke;
+  }
+  .content h1{
+      font-size: 70px;
+      margin-top: 80px;
+      font-family: 'Times New Roman', Times, serif;
+  }
+  .content p{
+      margin: 20px auto;
+      font-weight: 100px; ;
+      line-height:25px ;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+  }
+
+.pageheadings{
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:whitesmoke;
+    margin-top: 150px;
+
+  }
+.pageheadings h1{
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pageheadings p{
+    font-weight: 100px; ;
+    line-height:25px ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+  button {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 2px solid #009688;
+      background: transparent;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #fff;
+      margin: 10px 10px;
+      width: 200px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Times New Roman', Times, serif;
+  }
+  span{
+      background:#009688 ;
+      height:100%;
+      width: 0;
+      border-radius: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: 0.5s;
+  }
+  
+  button:hover span{
+      width: 100%;
+  }
+  button:hover{
+      border: none;
+  
+  }
+  button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.5);
+  }
+  .intro{
+      background: var(--light-bg);
+  
+  }
+  .intro .box-container .box .image {
+      height: 80%;
+      width: 100% ;
+  }
+    
+    .intro .box-container .box .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .intro .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      gap: 2rem;
+    }
+    
+    .intro .box-container .box p {
+      font-size: 1.7rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: var(--light-color);
+      text-transform: none;
+    }
+  
+    .intro .box-container .box.heading h1{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 100%;
+    }
+  
+    /* works */
+  .featured-wildlife .box-container .box .image {
+      height: 30rem;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+    }
+    
+    .featured-wildlife .box-container .box .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .featured-wildlife .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 5rem;
+      
+    }
+    
+    .featured-wildlife .box-container .box .image .content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      background: var(--black);
+      color: var(--white);
+      font-size: 1.7rem;
+      padding: 2rem;
+      z-index: 90;
+      transform: translateY(100%);
+    }
+    
+    .featured-wildlife .box-container .box:hover .image .content {
+      transform: translateY(0);
+    }
+    /* works */
+  
+    /* footer */
+  .footer {
+    width: 100%;
+      background: var(--black);
+      text-align: center;
+    }
+    
+    .footer .logo {
+      font-size: 2rem;
+      color:gray;
+      font-weight: 700;
+    }
+    
+    .footer .logo span {
+      font-weight: normal;
+    }
+    
+    .footer p {
+      margin-top: 2rem;
+
+      font-size: 1.7rem;
+      color: gray;
+    }
+    
+    .footer .socials ion-icon {
+      font-size: 2.5rem;
+      color: var(--black);
+      background: var(--light-bg);
+      border-radius: 50%;
+      padding: 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+    
+    /* footer */
+  
+  
+    /* media queries */
+  @media (max-width: 1200px) {
+      .header {
+        padding: 2rem;
+      }
+    
+      .header.active {
+        padding: 2rem;
+      }
+    
+      section {
+        padding: 3rem 2rem;
+      }
+    
+      .home h1 {
+        font-size: 5rem;
+      }
+    }
+    
+    @media (max-width: 991px) {
+      html {
+        font-size: 60%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header .menu {
+        display: block;
+      }
+    
+      .header .navbar {
+        position: fixed;
+        top: 6.4rem;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        transform: translateX(100%);
+      }
+    
+      header .navbar.show {
+        transform: translateX(0);
+      }
+    
+      .header .navbar a {
+        color: var(--black);
+        margin: 0;
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+    }
+    
+    @media (max-width: 450px) {
+      html {
+        font-size: 55%;
+      }
+    }
+
+     /* home-2 */
+  .home-2 {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('intro.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+  }
+  
+  /* home */
+
+  /* home-3 */
+  .home-3 {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('aliya.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .newmap {
+    width: 100%; /* Make the iframe responsive to its container */
+    max-width: 100%; /* Ensure it doesn't exceed its original size */
+    height: 450px; /* Set a fixed height or adjust as needed */
+    border: 1px solid #ddd; /* Add a border if desired */
+    border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
+    overflow: hidden; /* Hide any overflow beyond the border */
+}
+
+/* Style for the footer */
+footer {
+  background-color: #5b5858; /* Set your desired background color */
+  padding: 20px; /* Adjust padding as needed */
+  text-align: center;
+}
+
+/* Style for the image with class "contact" */
+.contact {
+  width: 100%;
+  max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+/* home-4 */
+.home-4 {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('pp.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+.container1 {
+  width: 100%;
+  margin: 30px 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left1 {
+  width: 55%;
+  height: 400px;
+  background: url(yalalep.jpg)
+    no-repeat center / cover;
+  border-radius: 8px;
+  border: 8px solid #022122;
+}
+
+.left2 {
+  width: 55%;
+  height: 400px;
+  background: url(lepord.jpg)
+    no-repeat center / cover;
+  border-radius: 8px;
+  border: 8px solid #022122;
+}
+
+.left3 {
+  width: 55%;
+  height: 400px;
+  background: url(Leopard-Samburu-National-Reserve-Kenya.webp)
+    no-repeat center / cover;
+  border-radius: 8px;
+  border: 8px solid #022122;
+}
+
+.right {
+  width: 100%;
+  min-height: 300px;
+  background-color: #022122;
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  margin-left: -60px;
+}
+
+.leopardbottom{
+  width: 100%;
+  min-height: 300px;
+  background-color: #022122;
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+
+/* container title */
+.right h3 {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: myfont1;
+  letter-spacing: 5px;
+  color: #eabaac;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+/* container paragraph */
+.right p {
+  margin: 20px 0;
+  font-weight: lighter;
+  line-height: 25px;
+  color: #fff4f0;
+  font-size: 15px;
+}
+/* home-5 */
+.home-5 {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('bear.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+/* CSS code for image hover effect */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 95%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* You can adjust the scale factor as per your preference */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+ /* footer */
+ .footer {
+    width: 100%;
+      background-color: #022122;
+      text-align: center;
+    }
+    
+    .footer .logo {
+      font-size: 2rem;
+      color:gray;
+      font-weight: 700;
+    }
+    
+    .footer .logo span {
+      font-weight: normal;
+    }
+    
+    .footer p {
+      margin-top: 2rem;
+
+      font-size: 1.7rem;
+      color: gray;
+    }
+    
+    .footer .socials ion-icon {
+      font-size: 2.5rem;
+      color: var(--black);
+      background: var(--black);
+      border-radius: 50%;
+      padding: 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+    
+    /* footer */
+  .footer {
+    width: 130%;
+      background-color: #022122;
+      text-align: center;
+    }
+    
+    .footer .logo {
+      font-size: 2rem;
+      color:gray;
+      font-weight: 700;
+    }
+    
+    .footer .logo span {
+      font-weight: normal;
+    }
+    
+    .footer p {
+      margin-top: 2rem;
+
+      font-size: 1.7rem;
+      color: gray;
+    }
+    
+    .footer .socials ion-icon {
+      font-size: 2.5rem;
+      color: var(--black);
+      background: var(--black);
+      border-radius: 50%;
+      padding: 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+    
+    /* footer */
+  
+    /* footer */

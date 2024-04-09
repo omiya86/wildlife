@@ -4,81 +4,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Lankan Wildlife</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body>
+<body x-data="topic3" >
     <header>
         <section class="home-3" id="home-3">
             <section class="header">
             <nav class="navbar">
                 <ul>
-                    <li><a href="Home Page.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Introduction.html">Introduction</a></li>
                     <li><a href="Department of Wildlife Conservation.html">Department of Wildlife Conservation</a></li>
                     <li><a href="Animals.html">Animals</a>
                         <section class="submenues">
                             <ul>
-                                <li><a href="yala.html">Yala National Park</a></li>
-                                <li><a href="wilpattu.html">Wilpattu National Park</a></li>
+                                <li><a href="Yala.html">Yala National Park</a></li>
+                                <li><a href="Wilpattu.html">Wilpattu National Park</a></li>
                             </ul>
                         </section>
                     </li>
                     <li><a href="Sri lankan Leopard.html">Sri Lankan Leopard</a></li>
+                    <li><a href="logintest.html">Login</a></li>
+                    <li><a href="data.html">Admin</a></li>
                 </ul>
             </nav>
             </section>
-            <section class="content ">
-                <h1>Department of Wildlife Conservation</h1>
+            <section class="pageheadings">
+                <h1 id="maintopic2" x-text="maintopic2" contenteditable="true"></h1>
 
             </section>
         </section>
     </header>
     
     <section class="intro" id="intro">
-        <div class="box-container">
-          <div class="box">
-            <h1 class="heading">Department</h1>
-            <p>
-                The Department of Wildlife Conservation (DWC) in Sri Lanka is a governmental organization responsible for the conservation and management of the country's diverse wildlife and natural habitats. It operates under the purview of the Ministry of Environment and is involved in various activities aimed at protecting and sustaining Sri Lanka's rich biodiversity. 
+        <section class="box-container">
+          <section class="box">
+            <h1 class="heading" id="mainsub1" x-text="mainsub1" contenteditable="true"></h1>
+            <p id="mainpara" x-text="mainpara" contenteditable="true">
              
             </p>
-            <p>
-                Key functions and responsibilities of the Department of Wildlife Conservation include:
+            <p id="title" x-text="title" contenteditable="true">
             </p>
-            <p>1.Conservation of Wildlife: The DWC is tasked with the conservation and protection of endangered species, as well as the overall biodiversity of the country.</p>
-             <p>
-               2. Management of Protected Areas: The department oversees the administration and management of national parks, wildlife sanctuaries, and nature reserves. This includes regulating activities within these areas to ensure the well-being of wildlife and their habitats.
+            <p id="title1" x-text="title1" contenteditable="true"></p>
+             <p id="title2" x-text="title2" contenteditable="true">
 
-                <p>
-              3.Wildlife Research and Monitoring: Engaging in research initiatives and monitoring programs to gather information about wildlife populations, behaviors, and habitats.
+                <p id="title3" x-text="title3" contenteditable="true">
                 </p>
 
-                <p>
-4.Human-Wildlife Conflict Mitigation: Addressing issues related to human-wildlife conflict, which can arise when wildlife encroaches on human settlements or agriculture.
+                <p id="title4" x-text="title4"contenteditable="true">
 </p>
-<p>
-5.Law Enforcement: Enforcing wildlife-related laws and regulations to prevent illegal activities such as poaching and illegal wildlife trade.
+<p id="title5" x-text="title5" contenteditable="true">
 </p>
-<p>
-6.Community Outreach and Education: Conducting awareness programs and educational initiatives to promote a better understanding of the importance of wildlife conservation among local communities.
+<p id="title6" x-text="title6" contenteditable="true">
 </p>
 
              </p>
-            </div>
+            </section>
     
-          <div class="box">
-            <div class="image">
+          <section class="box">
+            <section class="image">
               <img src="pasiya.png" alt="" />
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </section>
       </section>
       <section>
-   <div class="protect-img">
+      <section class="protect-img">
         <img src="protect1.jpg" alt="">
-      </div>
-      <div class="protect-img2">
         <img src="protect 2.png" alt="">
-      </div>      
+      </section>      
     </section>
     <iframe class="newmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31687.202514094577!2d79.88915440602784!3d6.902523658183574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1705472364431!5m2!1sen!2slk" width="1480" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <img src="contact.jpg" class="contact">
@@ -88,6 +82,13 @@
     <a href="#" class="logo">Sri Lankan Wildlife<span>Website</span></a>
     <p>All Rights Reserved | © 2024 Powered By Omika Fernando</p>
   </section>
+
   <!-- footer section ends -->
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="Department of Wildlife Conservation.js"></script>
 </body>
 </html>
